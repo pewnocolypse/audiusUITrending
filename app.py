@@ -6,7 +6,7 @@ app = Flask(__name__)
 CORS(app)
 
 # Audius API Trending Endpoint
-audiusTrendingURL = "https://discoveryprovider.audius.co/v1/tracks/trending"
+audiusTrendingURL = "https://discoveryprovider.audius.co/v1/tracks/trending?time=week"
 
 def fetch_trending_tracks():
     """
@@ -28,7 +28,8 @@ def fetch_trending_tracks():
                 "title": track.get('title') or "Undefined",
                 "artwork": track.get('artwork') or "Undefined",
                 "genre": track.get('genre') or "Undefined",
-                "mood": track.get('mood') or "Undefined"
+                "mood": track.get('mood') or "Undefined",
+                "artist_name": track.get('user').get('name') or "Undefined"
             }
             fetchTracks.append(fetchTrack)
 
