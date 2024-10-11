@@ -20,7 +20,7 @@ To test the backend Flask application:
 
 # FrontEnd
 1) Once you have the backend component running, open a new terminal window and cd into this folder `audius_trending_ui`
+2) Make sure you have node & nvm installed on your computer
 2) Run `npm install` to install any necessary dependencies
 3) Without any python env, run `npm start`
-        a) make sure you have node & nvm installed on your computer
 4) Load and view the page on your localhost:3000
